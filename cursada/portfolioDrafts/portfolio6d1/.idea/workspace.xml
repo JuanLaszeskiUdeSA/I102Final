@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="42dd852b-89e1-45ce-b4f2-93f0b3055122" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2XoFgLPkwZinsVwfRrgD6hrpY0h" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RunManager" selected="JUnit.PortfolioTest">
+    <configuration name="PortfolioTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="portfolio6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="portfolio6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="portfolio6" />
+      <option name="MAIN_CLASS_NAME" value="portfolio6.PortfolioTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioTest.testReportAfterADeposit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="portfolio6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="portfolio6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="portfolio6" />
+      <option name="MAIN_CLASS_NAME" value="portfolio6.PortfolioTest" />
+      <option name="METHOD_NAME" value="testReportAfterADeposit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PortfolioTest.testReportPortfolioAfterADeposit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="portfolio6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="portfolio6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="portfolio6" />
+      <option name="MAIN_CLASS_NAME" value="portfolio6.PortfolioTest" />
+      <option name="METHOD_NAME" value="testReportPortfolioAfterADeposit" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TransferTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="portfolio6" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="portfolio6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="portfolio6" />
+      <option name="MAIN_CLASS_NAME" value="portfolio6.TransferTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PortfolioTest" />
+        <item itemvalue="JUnit.TransferTest" />
+        <item itemvalue="JUnit.PortfolioTest.testReportPortfolioAfterADeposit" />
+        <item itemvalue="JUnit.PortfolioTest.testReportAfterADeposit" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="42dd852b-89e1-45ce-b4f2-93f0b3055122" name="Changes" comment="" />
+      <created>1699287636045</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1699287636045</updated>
+      <workItem from="1699287637389" duration="3215000" />
+      <workItem from="1699310361762" duration="483000" />
+      <workItem from="1699317826783" duration="3215000" />
+      <workItem from="1699393268838" duration="17000" />
+      <workItem from="1699393374747" duration="204000" />
+      <workItem from="1699393815687" duration="730000" />
+      <workItem from="1699452348868" duration="67000" />
+      <workItem from="1699458502756" duration="91000" />
+      <workItem from="1699467869215" duration="596000" />
+      <workItem from="1699468580737" duration="6000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

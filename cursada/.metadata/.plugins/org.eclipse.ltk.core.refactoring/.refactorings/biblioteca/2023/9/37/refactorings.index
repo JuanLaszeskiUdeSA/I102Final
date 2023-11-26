@@ -1,0 +1,13 @@
+1694553723847	Delete element
+1694556008677	Extract method 'java4Dummies'
+1694556177979	Extract method 'libraryWithABook'
+1694556314747	Inline local variable 'library'
+1694556458966	Inline local variable 'library'
+1694556477370	Inline local variable 'library'
+1694556595621	Extract constant 'CANNOT_REMOVE_BOOK_NOT_REGISTERED'
+1694556826506	Extract constant 'bookNotRented'
+1694556846870	Extract constant 'bookAlreadyRegistered'
+1694556860804	Extract constant 'bookUnvailable'
+1694557056304	Inline local variable 'library'
+1694557653745	Inline local variable 'library'
+1694557686431	Inline local variable 'e'

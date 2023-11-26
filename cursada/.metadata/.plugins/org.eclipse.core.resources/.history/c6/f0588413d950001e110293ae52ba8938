@@ -1,0 +1,8 @@
+
+public abstract class Head {
+	Dude Intemperate() {
+		return new Intemperate();
+	}
+
+	public abstract Dude head();
+}

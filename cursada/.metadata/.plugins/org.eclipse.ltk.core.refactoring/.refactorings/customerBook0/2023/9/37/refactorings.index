@@ -1,0 +1,6 @@
+1694786695292	Delete element
+1694788079141	Extract constant 'johnLennon'
+1694788120859	Extract constant 'paulMcCartney'
+1694788400845	Extract method 'customerBookPaulMcCartney'
+1694788524774	Inline local variable 'customerBook'
+1694789270830	Extract method 'customerBookJohnLennon'
