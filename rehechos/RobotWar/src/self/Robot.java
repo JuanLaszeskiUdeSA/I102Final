@@ -1,3 +1,5 @@
+package self;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,25 +37,18 @@ public abstract class Robot {
 
     public Robot attackTo(Robot target, Weapon aWeapon) {
         if (weapons.contains(aWeapon)) {
-            target.attackedBy( aWeapon);
+            aWeapon.damageTo( target , this);
         }
         return this;
     }
 
-    public void attackedBy(Weapon aWeapon) {
-        aWeapon.damageTo(this);
-    }
+    protected abstract void attackedBy(Weapon aWeapon, Robot attacker);
 
-
-    protected abstract void damagedByBlaster();
-
-    protected abstract void damagedByClaw(Claw aClaw);
-
-    public void setLifeTime(int lifeTime) {
-        if (lifeTime <= 0) {
+    public void reduceLife(int damage) {
+        if (lifeTime - damage <= 0) {
             throw new RuntimeException(ElJuegoHaTerminado);
         }
-        this.lifeTime = lifeTime;
+        this.lifeTime -= damage;
     }
     public int getCarryWeight() {
         return carryWeight;
@@ -63,5 +58,10 @@ public abstract class Robot {
     }
     public int getLifeTime() {
         return lifeTime;
+    }
+
+    public Robot removeWeapon(Weapon weapon) {
+        weapons.remove(weapon);
+        return this;
     }
 }

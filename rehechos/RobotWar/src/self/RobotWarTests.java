@@ -1,3 +1,5 @@
+package self;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.function.Executable;
@@ -106,7 +108,8 @@ public class RobotWarTests {
     @Test public void testAluminum3000AttackToAnotherAluminum3000(){
         Aluminum3000 otherAluminum3000 = new Aluminum3000();
         aluminum3000.addWeapon(claw).addWeapon(blaster)
-                .attackTo(otherAluminum3000, blaster).attackTo(otherAluminum3000, claw);
+                .attackTo(otherAluminum3000, blaster);
+        aluminum3000.attackTo(otherAluminum3000, claw);
         assertStats(otherAluminum3000, 50, 90, 70);
     }
 
@@ -115,14 +118,20 @@ public class RobotWarTests {
         assertThrowsLike(() -> aluminum3000.attackTo(tankRover, blaster), Robot.ElJuegoHaTerminado);
     }
 
-    @Test public void cannotAttackWithClawThatHasBeenUsedTwiceInAluminum3000(){
-        aluminum3000.addWeapon(claw).attackTo(new Aluminum3000(), claw).attackTo(new Aluminum3000(), claw);
-        assertThrowsLike(() -> aluminum3000.attackTo(tankRover, claw), Robot.ElArmaEstaRota);
+    @Test public void testAttackWithClawThatHasBeenUsedTwiceInAluminum3000DoesNotNothingInTheThirdHitAnThen(){
+        Aluminum3000 otherAluminum3000 = new Aluminum3000();
+        aluminum3000.addWeapon(claw).attackTo(otherAluminum3000, claw);
+        aluminum3000.attackTo(otherAluminum3000, claw);
+        aluminum3000.attackTo(otherAluminum3000, claw);
+        aluminum3000.attackTo(otherAluminum3000, claw);
+        assertStats(otherAluminum3000, 50, 90, 50);
     }
 
-    @Test public void cannotAttackWithClawThatHasBeenUsedOnceInTankRover(){
+    @Test public void testAttackWithClawThatHasBeenUsedOnceInTankRoverDoesNotNothingThen(){
         aluminum3000.addWeapon(claw).attackTo(tankRover, claw);
-        assertThrowsLike(() -> aluminum3000.attackTo(tankRover, claw), Robot.ElArmaEstaRota);
+        aluminum3000.attackTo(tankRover, claw);
+        assertStats(tankRover, 200, 40, 95);
+
     }
 
     private Claw claw(){return new Claw();}
