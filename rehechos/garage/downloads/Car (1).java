@@ -1,4 +1,4 @@
-package garageEventos1;
+package downloads;
 
 public class Car {
   private int passengers;

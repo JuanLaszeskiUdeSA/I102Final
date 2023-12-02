@@ -1,4 +1,4 @@
-package garageEventos1;
+package downloads;
 
 public class VisitorCar extends ParkedCar {
   public static int VisitorFee = 160;
