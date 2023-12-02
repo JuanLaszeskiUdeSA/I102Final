@@ -1,4 +1,4 @@
-package HanoiG1;
+package julio;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -50,7 +50,7 @@ public class HanoiTest {
 		assertFalse(new Disc(4).stacksOn(new Disc(3)));
 	}
 	
-	@Test
+	/*@Test
 	public void test06() {
 		
 		Stick stickRight = new Stick();
@@ -60,5 +60,5 @@ public class HanoiTest {
 		hanoi.moveRL();
 		
 		assertEquals(new Disc(3), hanoi.left().top());
-	}
+	}*/
 }

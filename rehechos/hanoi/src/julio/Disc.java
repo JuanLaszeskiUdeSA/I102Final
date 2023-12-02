@@ -1,4 +1,4 @@
-package HanoiG1;
+package julio;
 
 public class Disc {
 	private int radio;
