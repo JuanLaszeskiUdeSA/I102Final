@@ -1,9 +1,13 @@
-package codigorepetido;
+package self;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class CustomerBook {
+  public static String CustomerNameCannotBeEmpty = "customer name cannot be empty!!!!!!";
+  public static String CannotSuspendCustomer = "Cannot suspend customer";
+  public static String CustomerNotFound = "Customer not found";
+
   private List<String> active;
   private List<String> suspended;
 
@@ -22,7 +26,7 @@ public class CustomerBook {
 
   public void addCustomerNamed( String s ) {
     if (s.isEmpty()) { 
-      throw new RuntimeException( "customer name cannot be empty!!!!!!" ); 
+      throw new RuntimeException( CustomerNameCannotBeEmpty );
     }
     
     if (active.contains( s ) || suspended.contains( s )) {
@@ -44,7 +48,7 @@ public class CustomerBook {
   }
 
   public void removeCustomerNamed( String aName ) {
-    for (int i = 0; i < active.size(); i++) {
+    /*for (int i = 0; i < active.size(); i++) {
       if (aName.equals( active.get( i ) )) {
         active.remove( i );
         return;
@@ -55,8 +59,12 @@ public class CustomerBook {
         suspended.remove( i );
         return;
       }
+    }*/
+    if (!active.contains( aName ) && !suspended.contains( aName )) {
+      throw new RuntimeException( CustomerNotFound );
     }
-    throw new RuntimeException( "Customer not found" );
+    active.remove( aName );
+    suspended.remove( aName );
   }
 
   public void suspendCustomerNamed( String aName ) {

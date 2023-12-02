@@ -1,4 +1,4 @@
-package codigorepetido;
+package emilio;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -73,7 +73,7 @@ public class CustomerBookTest {
 
   @Test public void testCanNotSuspendAnInvalidCustomer() {
     String johnLennon = "John Lennon";
-    CustomerBook customerBook = customerBookWith( johnLennon );    
+    CustomerBook customerBook = customerBookWith( johnLennon );
 
     assertThrowsLike( () -> customerBook.suspendCustomerNamed( "George Harrison" ),
                       CustomerBook.CannotSuspend );
@@ -99,7 +99,7 @@ public class CustomerBookTest {
   }
 
   private CustomerBook customerBookWithSuspended( String johnLennon ) {
-    CustomerBook customerBook = customerBookWith( johnLennon );    
+    CustomerBook customerBook = customerBookWith( johnLennon );
     customerBook.suspendCustomerNamed( johnLennon );
     return customerBook;
   }
