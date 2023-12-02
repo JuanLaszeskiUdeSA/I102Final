@@ -1,4 +1,4 @@
-package numerosZ2c;
+package self;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
