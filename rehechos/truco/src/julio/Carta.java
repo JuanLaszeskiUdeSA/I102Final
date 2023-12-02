@@ -1,4 +1,4 @@
-package truco;
+package julio;
 
 public class Carta {
 	

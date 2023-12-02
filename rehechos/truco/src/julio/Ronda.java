@@ -1,4 +1,4 @@
-package truco;
+package julio;
 
 import java.util.ArrayList;
 
@@ -12,7 +12,7 @@ public class Ronda {
 	private String turno;
 
 	public Ronda(ArrayList<Carta> cartasDeManoDisponibles, ArrayList<Carta> cartasDePieDisponibles,
-							ArrayList<Carta> cartasDeManoJugadas, ArrayList<Carta> cartasDePieJugadas ) {
+                 ArrayList<Carta> cartasDeManoJugadas, ArrayList<Carta> cartasDePieJugadas ) {
 	}	
 	public Ronda() {	}
 	
