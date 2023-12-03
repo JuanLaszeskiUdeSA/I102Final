@@ -1,21 +1,14 @@
 package self6;
 
-public class TransferTransaction extends Transaction {
+public abstract class TransferTransaction extends Transaction {
   protected Transfer transfer;
-  
-  public TransferTransaction( Transfer aTransfer ) {
-    super( aTransfer.value() );
-    transfer = aTransfer;
+
+  public TransferTransaction( Transfer transfer ) {
+    this.transfer = transfer;
   }
 
-  public int valueForBalance() {
-    // TODO Auto-generated method stub
-    return 0;
-  }
-
-  public String reportDetail() {
-    // TODO Auto-generated method stub
-    return null;
+  public int value() {
+    return transfer.value();
   }
 
 }

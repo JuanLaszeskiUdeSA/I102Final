@@ -1,4 +1,4 @@
-package portfolio8;
+package self6;
 
 public class TransferDestination  extends TransferTransaction{
 
@@ -14,8 +14,8 @@ public class TransferDestination  extends TransferTransaction{
     return value();
   }
 
-  public void accept( PortfolioVisitor visitor ) {
-    visitor.visitTransferDestination( this );
+  public String reportDetail() {
+    return "Depósito por transferencia de: " + value();
   }
 
 }

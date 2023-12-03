@@ -1,3 +1,4 @@
+/*
 package portfolio6a;
 
 import org.junit.platform.suite.api.SelectPackages;
@@ -8,3 +9,4 @@ import org.junit.platform.suite.api.Suite;
 public class PortfolioSuite {
 
 }
+*/

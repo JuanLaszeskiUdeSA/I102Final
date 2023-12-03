@@ -1,4 +1,4 @@
-package portfolio8;
+package self6;
 
 public class TransferOrigin extends TransferTransaction {
 
@@ -14,8 +14,9 @@ public class TransferOrigin extends TransferTransaction {
     return - value();
   }
 
-  public void accept( PortfolioVisitor visitor ) {
-    visitor.visitTransferOrigin( this );
+  public String reportDetail() {
+    return "Débito por transferencia de: " + value();
   }
+
 
 }

@@ -12,11 +12,7 @@ public class Account extends Accountable {
         .map( (transaction) -> transaction.valueForBalance() )
         .reduce(0, (a, b) -> a + b);
   }
-  public Account register( Transaction aTransaction ) {
-    transactions.add( aTransaction );
-    return this;
-  }
-
+  
   public Account deposit( int anAmount ) {
     return register( new Deposit( anAmount ) );
   }
@@ -28,7 +24,12 @@ public class Account extends Accountable {
     
     return register( new Withdraw( anAmount ) );
   }
-  
+
+  public Account register( Transaction trannsactionToRegister ) {
+     transactions.add( trannsactionToRegister );
+     return this;
+  }
+
   public String report( String prefix ) {
     List<String> report = new ArrayList();
     

@@ -1,7 +1,3 @@
-Ahora queremos poder tener Porfolios para nuestros ejecutivos de cuenta 
-Los portfolios pueden tener varias cuentas o portfolios. 
-A los portfolios se les puede pedir el balance acumulado de sus contenidos 
-y reportes como a las cuentas.
-Importante: Dentro de un portfolio no se pueden repetir cuentas o portfolios.
-
-PD: los reportes tienen que verse lindos!
+Necesitamos definir Transferencias, en donde movemos dinero de un origen a un destino.
+El modelo resultante debe ser compatible con lo desarrollado hasta ahora, es decir, permitir un balance y un reporte. 
+Pero además debe poder llegarse desde una pata de la transfPortfolioTest.javaerencia a la otra.

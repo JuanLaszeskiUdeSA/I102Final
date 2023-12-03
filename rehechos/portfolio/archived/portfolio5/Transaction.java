@@ -1,4 +1,4 @@
-package portfolio5;
+package self6;
 
 public abstract class Transaction {
   protected int value;

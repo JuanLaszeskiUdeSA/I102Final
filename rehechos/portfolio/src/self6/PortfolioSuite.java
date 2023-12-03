@@ -1,11 +1,11 @@
-package self6;/*
-package portfolio5;
+/*
+package portfolio6;
 
 import org.junit.platform.suite.api.SelectPackages;
 import org.junit.platform.suite.api.Suite;
 
 @Suite
-@SelectPackages("portfolio5")
+@SelectPackages("portfolio6")
 public class PortfolioSuite {
 
 }

@@ -1,4 +1,4 @@
-package portfolio8;
+package self6;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test;
 public class TransferTest {
 
   @Test void testValueOfTransfer() {
-    Transfer transfer = transferOf( 10 );
-    assertEquals( 10, transfer.value() );
+    assertEquals( 10, transferOf( 10 ).value() );
   }
   
   @Test void testValueOfTransferShouldBePositive() {
@@ -24,7 +23,7 @@ public class TransferTest {
     Transfer transfer = transferOf( 10 );
     assertEquals( transfer.value(), transfer.destination().value() );
   }
-
+  
   @Test void testOriginIsDestinationOrigin() {
     Transfer transfer = transferOf( 10 );
     assertEquals( transfer.origin(), transfer.destination().origin() );
@@ -44,6 +43,30 @@ public class TransferTest {
     assertEquals( 20, anotherAccount.balance() );
   }
    
+//  @Test void testReportAfterATransferenceWithdraw() {
+//    Account anAccount = accountWith10();
+//    Account anotherAccount = accountWith10();
+//    
+//    transferRegister( 10, anAccount, anotherAccount );
+//    assertEquals( "Cuenta:\n" + 
+//                  "  Deposit: 10\n" +
+//                  "  Débito por transferencia de: 10\n" + 
+//                  "Balance: 0", 
+//                  anAccount.report() );
+//  }
+//
+//  @Test void testReportAfterATransferenceDeposit() {
+//    Account anAccount = accountWith10();
+//    Account anotherAccount = accountWith10();
+//    
+//    transferRegister( 10, anAccount, anotherAccount );
+//    assertEquals( "Cuenta:\n" + 
+//                  "  Deposit: 10\n" +
+//                  "  Depósito por transferencia de: 10\n" + 
+//                  "Balance: 20", 
+//                  anotherAccount.report() );
+//  }
+//  
   private Transfer transferRegister( int anAmmount, Account originAccount, Account destinationAccount ) {
     return Transfer.register( anAmmount, originAccount, destinationAccount );
   }
@@ -51,7 +74,7 @@ public class TransferTest {
   private Transfer transferOf( int anAmmount ) {
     return new Transfer( anAmmount );
   }
-
+//
   private Account accountWith10() {
     return new Account().deposit( 10 );
   }

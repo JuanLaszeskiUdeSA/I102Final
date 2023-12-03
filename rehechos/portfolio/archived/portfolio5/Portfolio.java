@@ -1,4 +1,4 @@
-package portfolio8;
+package self6;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +12,17 @@ public class Portfolio extends Accountable {
         .reduce(0, (a, b) -> a + b);
   }
 
+  public String report( String prefix ) {
+    List<String> report = new ArrayList();
+    
+    report.add( prefix + "Portfolio:" );
+    accounts.forEach( (accountable) -> {
+        report.add( accountable.report( prefix + "  ") );
+    });
+    
+    return String.join("\n", report);
+  }
+  
   public Portfolio addAccount( Accountable anAccount ) {
     if ( contains( anAccount ) ) throw new RuntimeException();
     
@@ -28,16 +39,6 @@ public class Portfolio extends Accountable {
   public List<Account> accounts() {
     return accounts.stream().map( (accountable) -> accountable.accounts() )
                             .reduce( new ArrayList(), (a, b) -> { a.addAll( b ); return a; } );
-  }
-
-  public void accept( PortfolioVisitor vistor ) {
-    vistor.visitPortfolio( this );
-  }
-
-  public void visitAccountsOn( PortfolioVisitor summaryTreeReport ) {
-    accounts.forEach( (accountable) -> {
-        accountable.accept( summaryTreeReport );
-    });    
   }
   
 }

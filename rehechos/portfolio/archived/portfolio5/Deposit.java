@@ -1,4 +1,4 @@
-package portfolio8;
+package self6;
 
 public class Deposit extends Transaction {
 
@@ -10,8 +10,8 @@ public class Deposit extends Transaction {
     return value;
   }
 
-  public void accept( PortfolioVisitor visitor ) {
-    visitor.visitDeposit( this );
+  public String reportDetail() {
+    return "Deposit: " + value;
   }
 
 }
