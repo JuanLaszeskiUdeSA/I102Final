@@ -1,4 +1,4 @@
-package self23;
+package self3;
 
 import org.junit.jupiter.api.Test;
 

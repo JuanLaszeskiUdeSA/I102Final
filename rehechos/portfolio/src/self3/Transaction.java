@@ -1,4 +1,4 @@
-package self23;
+package self3;
 
 public class Transaction {
     private int amount;
