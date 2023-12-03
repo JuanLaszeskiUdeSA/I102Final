@@ -1,4 +1,4 @@
-package self6;
+package self6a;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class Portfolio extends Accountable {
         report.add( accountable.report( prefix + "  ") );
     });
     
-    return String.join("\n", report);
+    return String.join("\n", report) + "\n" + prefix + "Balance: " + balance();
   }
   
   public Portfolio addAccount( Accountable anAccount ) {
@@ -40,5 +40,10 @@ public class Portfolio extends Accountable {
     return accounts.stream().map( (accountable) -> accountable.accounts() )
                             .reduce( new ArrayList(), (a, b) -> { a.addAll( b ); return a; } );
   }
-  
+
+  @Override
+  public String title() {
+    return "Portfolio:";
+  }
+
 }

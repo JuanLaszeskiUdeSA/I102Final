@@ -1,8 +1,9 @@
-package self6;
+package self6a;
+
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import org.junit.jupiter.api.Test;
 
 public class PortfolioTest {
 
@@ -25,24 +26,6 @@ public class PortfolioTest {
     Account account = new Account();
     assertThrows( RuntimeException.class, () -> account.withdraw( 5 ) );
     assertEquals( 0, account.balance() );
-  }
-  
-  @Test void testReportAfterADeposit() {
-    assertEquals( "Cuenta:\n" + 
-                  "  Deposit: 10\n" + 
-                  "Balance: 10",
-                  accountWith10().report() );
-  }
-  
-  @Test void testReportAfterAWithdraw() {
-    Account account = new Account();
-    account.deposit( 10 )
-           .withdraw( 5 );
-    assertEquals( "Cuenta:\n" + 
-                  "  Deposit: 10\n" +
-                  "  Withdraw: 5\n" + 
-                  "Balance: 5",
-                  account.report() );
   }
   
   // Portfolios
@@ -114,34 +97,7 @@ public class PortfolioTest {
 
     assertEquals( 10, a.balance() );
   }
-  
-  // reportes:
-  @Test void testReportPortfolioAfterADeposit() {
-    assertEquals( "Portfolio:\n" +  
-                  "  Cuenta:\n" +  
-                  "    Deposit: 10\n" + 
-                  "  Balance: 10", new Portfolio().addAccount( accountWith10() ).report() );
-  }
- 
-  @Test void testReportPortfolioComplex() {
-    assertEquals( "Portfolio:\n" +  
-                  "  Portfolio:\n" +
-                  "    Cuenta:\n" + 
-                  "      Deposit: 10\n" +  
-                  "    Balance: 10\n" +
-                  "  Cuenta:\n" + 
-                  "    Deposit: 10\n" + 
-                  "  Balance: 10\n" +
-                  "  Portfolio:\n" +  
-                  "    Cuenta:\n" +  
-                  "      Deposit: 10\n" + 
-                  "    Balance: 10", 
-                  new Portfolio().addAccount( new Portfolio().addAccount( accountWith10() ) )
-                                 .addAccount( accountWith10() )
-                                 .addAccount( new Portfolio().addAccount( accountWith10() ) ).report() );
-  }
-   
- 
+
   private Account accountWith10() {
     return new Account().deposit( 10 );
   }

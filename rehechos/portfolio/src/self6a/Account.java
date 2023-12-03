@@ -1,4 +1,4 @@
-package self6;
+package self6a;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -49,5 +49,14 @@ public class Account extends Accountable {
 
   public List<Account> accounts() {
     return Arrays.asList( this );
+  }
+
+  @Override
+  public String title() {
+    return "Cuenta:";
+  }
+
+  public List<Transaction> transactions() {
+    return transactions;
   }
 }

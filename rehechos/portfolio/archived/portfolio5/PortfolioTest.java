@@ -1,4 +1,4 @@
-package self6;
+package self6a;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

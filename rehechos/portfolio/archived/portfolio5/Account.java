@@ -1,4 +1,4 @@
-package self6;
+package self6a;
 
 import java.util.ArrayList;
 import java.util.Arrays;

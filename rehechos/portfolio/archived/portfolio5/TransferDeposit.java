@@ -1,4 +1,4 @@
-package self6;
+package self6a;
 
 public class TransferDeposit extends TransferTransaction {
 
