@@ -14,7 +14,6 @@ public class NumeroTest {
 	private Numero three;
 	private Numero four;
 	private Numero five;
-	private Numero eight;
 	private Numero negativeOne;
 	private Numero negativeTwo;
 	private Numero oneHalf;
@@ -26,22 +25,21 @@ public class NumeroTest {
 	private Numero negativeOneHalf;
 
 	@BeforeEach public void setUp() {
-		zero = Numero.with( 0 );
-		one = Numero.with( 1 );
-		two = Numero.with( 2 );
-		three = Numero.with( 3 );
-		four = Numero.with( 4 );
-		five = Numero.with( 5 );
-		eight = Numero.with( 8 );
-		oneFifth = Numero.with( 1, 5 );
-		oneHalf = Numero.with( 1, 2 );
-		twoFifth = Numero.with( 2, 5 );
-		twoTwentyfifth = Numero.with( 2, 25 );
-		fiveHalfs = Numero.with( 5, 2 );
-		sixFifths = Numero.with( 6, 5 );
-		negativeOne = Numero.with( -1 );
-		negativeTwo = Numero.with( -2 );
-		negativeOneHalf = Numero.with( -1, 2 );
+		zero = Entero.with( 0 );
+		one = Entero.with( 1 );
+		two = Entero.with( 2 );
+		three = Entero.with( 3 );
+		four = Entero.with( 4 );
+		five = Entero.with( 5 );
+		oneFifth = one.dividedBy( five );
+		oneHalf = one.dividedBy( two );
+		twoFifth = two.dividedBy( five );
+		twoTwentyfifth = two.dividedBy( Entero.with( 25 ) );
+		fiveHalfs = five.dividedBy( two );
+		sixFifths = Entero.with( 6 ).dividedBy( five );
+		negativeOne = one.negated();
+		negativeTwo = two.negated();
+		negativeOneHalf = negativeOne.dividedBy( two );
 	}
 
 	@Test public void test01isCeroReturnsTrueWhenAskToZero() {
@@ -76,7 +74,7 @@ public class NumeroTest {
 		// La suma de fracciones es:
 		// a/b + c/d = (a.d + c.b) / (b.d)
 		// TODAVIA NO SE ESTA TESTEANDO LA REDUCCION DE FRACCIONES NO SE PREOCUPEN!!
-		assertEquals( Numero.with( 7, 10 ), oneFifth.addedTo( oneHalf ) );
+		assertEquals( Entero.with( 7 ).dividedBy( Entero.with( 10 ) ), oneFifth.addedTo( oneHalf ) );
 	}
 
 	@Test public void test09FraccionMultipliesWithFraccionCorrectly() {
@@ -141,12 +139,12 @@ public class NumeroTest {
 
 	@Test public void test23CanNotDivideEnteroByZero() {
 		assertEquals( Numero.CanNotDivideByZero,
-					  assertThrows( RuntimeException.class, () -> one.dividedBy( zero ) ).getMessage() );
+				assertThrows( RuntimeException.class, () -> one.dividedBy( zero ) ).getMessage() );
 	}
 
 	@Test public void test24CanNotDivideFraccionByZero() {
 		assertEquals( Numero.CanNotDivideByZero,
-					  assertThrows( RuntimeException.class, () -> oneHalf.dividedBy( zero ) ).getMessage() );
+				assertThrows( RuntimeException.class, () -> oneHalf.dividedBy( zero ) ).getMessage() );
 	}
 
 	@Test public void test25AFraccionCanNotBeZero() {
@@ -175,7 +173,7 @@ public class NumeroTest {
 	}
 
 	@Test public void test31SubstractingFraccionesCanReturnAnEntero() {
-		assertEquals( one, Numero.with( 3, 2 ).substractedBy( oneHalf ) );
+		assertEquals( one, three.dividedBy( two ).substractedBy( oneHalf ) );
 	}
 
 	@Test public void test32SubstractingSameEnterosReturnsZero() {
@@ -187,7 +185,7 @@ public class NumeroTest {
 	}
 
 	@Test public void test34SubstractingAHigherValueToANumberReturnsANegativeNumber() {
-		assertEquals( Numero.with( -3, 2 ), one.substractedBy( fiveHalfs ) );
+		assertEquals( three.negated().dividedBy( two ), one.substractedBy( fiveHalfs ) );
 	}
 
 	@Test public void test35NegationOfEnteroIsCorrect() {
@@ -199,7 +197,7 @@ public class NumeroTest {
 	}
 
 	@Test public void test37SignIsCorrectlyAssignedToFractionWithTwoNegatives() {
-		assertEquals( oneHalf, Numero.with( -1, -2 ) );
+		assertEquals( oneHalf, negativeOne.dividedBy( negativeTwo ) );
 	}
 
 	@Test public void test38SignIsCorrectlyAssignedToFractionWithNegativeDivisor() {

@@ -15,7 +15,7 @@ public abstract class Numero {
     public abstract Numero divideMeAsEntero( Entero dividend );
     public abstract Numero divideMeAsFraccion(Fraccion aDividend);
 
-    public Numero substractedBy( Numero aDivisor ) { return null; }
+    public abstract Numero substractedBy( Numero aDivisor );
     public abstract Numero subtractMeAsEntero(Entero anEnteroMinuend);
     public abstract Numero subtractMeAsFraccion(Fraccion aFraccionMinuend);
 
