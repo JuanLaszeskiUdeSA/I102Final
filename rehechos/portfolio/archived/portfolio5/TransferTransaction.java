@@ -1,4 +1,4 @@
-package self6a;
+package self6;
 
 public class TransferTransaction extends Transaction {
   protected Transfer transfer;

@@ -34,7 +34,7 @@ public class Portfolio extends Accountable {
   }
 
   public void reportOn( SummaryTreeReport report ) {
-    report.reportAsPortofolio( this );    
+    report.reportAsPortfolio( this );
   }
  
 }

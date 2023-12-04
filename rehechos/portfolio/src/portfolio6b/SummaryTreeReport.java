@@ -18,7 +18,7 @@ public class SummaryTreeReport {
     return String.join("\n", report);
   }
 
-  public void reportAsPortofolio( Portfolio portfolio ) {
+  public void reportAsPortfolio(Portfolio portfolio ) {
     report.add( prefix + portfolio.title() );
 
     portfolio.accounts.forEach( (accountable) -> {

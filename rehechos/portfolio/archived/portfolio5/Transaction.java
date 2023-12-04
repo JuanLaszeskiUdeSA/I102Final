@@ -1,4 +1,4 @@
-package self6a;
+package self6;
 
 public abstract class Transaction {
   protected int value;
