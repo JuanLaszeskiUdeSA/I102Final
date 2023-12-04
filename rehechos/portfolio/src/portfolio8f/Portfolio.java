@@ -20,7 +20,7 @@ public class Portfolio extends Accountable {
   }
 
   public boolean contains( Accountable anAccount ) {
-    List  reminder = accounts();
+    List reminder = accounts();
     reminder.retainAll( anAccount.accounts() );
     return !reminder.isEmpty();
   }

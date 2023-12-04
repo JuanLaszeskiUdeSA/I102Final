@@ -36,5 +36,4 @@ public class SummaryTreeReport extends ReportVisitor {
   public void visitTransferOrigin( TransferOrigin transferOrigin ) {
     report.add(prefix + "  " + "Débito por transferencia de: " + transferOrigin.value() );
   }
-
 }
